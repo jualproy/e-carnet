@@ -1,10 +1,15 @@
 // Import the functions you need from the SDKs you need
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-app.js";
+import { initializeApp } 
+from "https://www.gstatic.com/firebasejs/9.9.1/firebase-app.js";
 import { getFirestore, 
         doc,
         getDoc,
         setDoc
-     } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-firestore.js"
+     } 
+from "https://www.gstatic.com/firebasejs/9.9.1/firebase-firestore.js"
+
+import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } 
+from "https://www.gstatic.com/firebasejs/9.9.1/firebase-auth.js"
 
 const firebaseConfig = {
     apiKey: "AIzaSyDa7s2uAZDuJbYcQKFBEQDib7vhxOyYlz0",
@@ -38,3 +43,8 @@ export const regaprendiz=(tdoc,numdoc,nom,apel,rh,ficha,titulada,jornada,sede,im
 
 export const search_aprendiz = numdoc => getDoc(doc(db,'listregistros',numdoc));
 
+const auth = getAuth(app);
+
+export const loginvalidation=(email,password)=>signInWithEmailAndPassword(auth, email, password);
+
+  
