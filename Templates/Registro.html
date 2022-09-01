@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sistema e-carnet</title>
+	<link rel="icon" href="../imagenes/Sena.png">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="../css/templates.css">
+	<link rel="stylesheet" href="../css/font-awesome.min.css">
+
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+    <div class="contenedor">
+		<header>
+			<div class="logo">
+				<img src="../imagenes/logo.png" alt="">
+			</div>
+			<nav class="menu" style="width: 48%;">
+				<a href="#">Inicio</a>
+				<a href="#">Registro</a>
+				<a href="#">Invitado</a>
+			</nav>
+		</header>
+		<section class="main">
+			<article>
+				<div class="titulo">
+					<h1>Bienvenidos al portal e-carnet</h1>
+					<br>
+					<img src="../imagenes/Sena.png" class="card-img-top" alt="...">
+				</div>
+			</article>
+			<article>
+				<form id="fregistro">
+					<div class="form-group">
+						<p>
+							A continuación se debe completar la siguiente información 
+							para realizar el registro del aprendiz o intsructor a través de la
+							plataforma e-carnet.
+						</p>
+					</div>
+					
+					<div class="form-group">
+						<label for="exampleFormControlSelect1">Tipo de documento (Seleccione tipo de documento)</label>
+						<select class="form-control" id="Selectdoc">
+						  <option>Ti</option>
+						  <option>CC</option>
+						  <option>CE</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="exampleFormControlInput1">Numero de documento: </label>
+						<input type="number" class="form-control" id="Inputdocumento" placeholder="Ingrese numero de documento">
+					</div>
+					<div class="form-group">
+						<label for="exampleFormControlInput1">Nombre: </label>
+						<input type="text" class="form-control" id="Inputnombre" placeholder="Ingrese Nombres">
+					</div>
+					<div class="form-group">
+						<label for="exampleFormControlInput1">Apellidos: </label>
+						<input type="text" class="form-control" id="Inputapellido" placeholder="Ingrese Apellidos">
+					</div>
+					<div class="form-group">
+						<label for="exampleFormControlSelect1">Rh (Seleccione tipo Rh)</label>
+						<select class="form-control" id="Selectrh">
+						  <option>O+</option>
+						  <option>O-</option>
+						  <option>A+</option>
+						  <option>A-</option>
+						  <option>B+</option>
+						  <option>B-</option>
+						  <option>AB+</option>
+						  <option>AB-</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="exampleFormControlInput1">Ficha: </label>
+						<input type="number" class="form-control" id="Inputficha" placeholder="No. de ficha">
+					</div>
+					<div class="form-group">
+						<label for="exampleFormControlInput1">Nombre titula: </label>
+						<input type="text" class="form-control" id="Inputtitulada" placeholder="Nombre de la titulada">
+					</div>
+					
+					<div class="form-group">
+					  <label for="exampleFormControlSelect1">Jornada (Seleccione la jornada)</label>
+					  <select class="form-control" id="Selectjornada" >
+						<option>Mañana</option>
+						<option>Tarde</option>
+						<option>Noche</option>
+					  </select>
+					</div>
+					<div class="form-group">
+					  <label for="exampleFormControlSelect2">Sede: (Seleccion la sede)</label>
+					  <select class="form-control" id="Selectsede">
+						<option>CAFEC - Yopal</option>
+						<option>CAFEC - Manare</option>
+					  </select>
+					</div>
+					<div class="form-group">
+						<label for="exampleFormControlFile1">Seleccione su foto tipo carnet</label>
+						<input type="file" id="inputFileToLoad" class="form-control" placeholder="photo" accept="image/*;capture=camera" name="userPhoto" single />
+						<i class="glyphicon glyphicon-fire form-control-feedback"></i>
+						<input type="text" id="response" class="form-control" placeholder="Base-64 value" />
+						<i class="glyphicon glyphicon-globe form-control-feedback"></i>
+					</div>
+					<div class="boton">
+						<button class="btn btn-primary" id="btn-save">Guardar</button>
+						<a href="#" id="btn-cancel">Cancelar</a>
+					</div>
+					
+				</form>
+			</article>
+		</section>
+		<footer>
+			<div class="autor">
+				<p>Creado por Julian Ramírez </p>
+			</div>
+			<div class="redes-sociales">
+				<a href="#">Facebook</a>
+				<a href="#">Twitter</a>
+			</div>
+		</footer>
+	</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+	<script src="../js/firebase/base64.js"></script>
+	<script type="module" src="../js/registro.js"></script>
+</body>
+</html>
